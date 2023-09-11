@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat:wght@700&family=Orbitron&family=Poppins:wght@400;500;600;700&family=Rowdies:wght@700&family=Ubuntu:ital,wght@0,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/5d2a9b059b.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="header">
+            <h2 class="title1"><i class="fa-solid fa-book"></i>Library</h2>
+            <h2 class="title2">For The Odin Project Javascript Path</h2>
+        </div>
+        <div class="content">
+            <p id="description">
+                Please fill out the fields below, if you do not know the number
+                of pages it can be left blank. <br />Upon submit the book will
+                be added to your library below.
+            </p>
+            <form>
+                <fieldset class="styled-fieldset">
+                    <legend>Title:</legend>
+                    <input
+                        required
+                        class="styled-input"
+                        id="title"
+                        name="title"
+                    />
+                </fieldset>
+
+                <fieldset class="styled-fieldset">
+                    <legend>Author:</legend>
+                    <input
+                        required
+                        class="styled-input"
+                        id="author"
+                        name="author"
+                    />
+                </fieldset>
+
+                <fieldset class="styled-fieldset">
+                    <legend>Pages:</legend>
+                    <input class="styled-input" id="pages" type="number" min="0" />
+                </fieldset>
+
+                <fieldset class="styled-fieldset">
+                    <legend>Status:</legend>
+                    <input
+                        type="radio"
+                        id="read-status"
+                        class="styled-input"
+                        name="status"
+                        value="read"
+                        required
+                    />
+                    <label for="read-status">Read</label>
+                    <input
+                        type="radio"
+                        id="unread-status"
+                        class="styled-input"
+                        name="status"
+                        value="unread"
+                        required
+                    />
+                    <label for="unread-status">Unread</label>
+                </fieldset>
+
+                <button id="submit" type="submit">Submit</button>
+            </form>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="book-title">Title</th>
+                        <th class="book-author">Author</th>
+                        <th class="book-pages">Pages</th>
+                        <th class="book-status">Status</th>
+                        <th class="book-action">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be added here -->
+                </tbody>
+            </table>
+            <!-- Javascript will fill in this content -->
+        </div>
+        <script src="books.js" defer></script>
+    </body>
+</html>
